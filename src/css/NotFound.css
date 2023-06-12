@@ -1,0 +1,32 @@
+.NotFound-wp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.NotFound-wp h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  font-size: 2.5em;
+  font-style: italic;
+  margin: 30px;
+}
+
+.NotFound-wp button{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 220px;
+  border: 1px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.3em;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px 15px;
+}
+
+.NotFound-wp button:hover{
+  border: 1px solid gray;
+  transition: 0.3s;
+  color: gray;
+}

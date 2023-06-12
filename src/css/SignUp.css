@@ -1,0 +1,125 @@
+.SignUp-wp{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.SignUp-wp h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 130px;
+  margin-bottom: 0px;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: #182747;
+}
+
+.SignUp-wp form{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  margin: 0px auto;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  right: 27px;
+}
+
+.SignUp-box{
+  width: 280px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.SignUp-wp > form label{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 30%;
+  font-size: 0.9em;
+  color: #182747;
+  font-weight: bold;
+}
+
+.SignUp-wp > form input{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 70%;
+  height: 15px;
+  margin: 5px;
+  border: 1px solid #111c3286;
+  border-radius: 5px;
+  outline: none;
+  padding: 3px;
+}
+
+.SignUp-box-Adress{
+  margin: 10px auto;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.SignUp-box-Adress label{
+  width: 25%;
+  position: relative;
+  top: 5px;
+}
+
+.SignUp-box-Adress-input-box{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUp-box-Adress-input-box > input{
+  width: 91% !important;
+}
+
+.SignUp-box-Adress-post-box{
+  width: 98%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.SignUp-box-Adress-post-box button{
+  background-color: transparent;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  width: 25%;
+  padding: 5px 0;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.SignUp-box-Adress-post-box input{
+  width: 80%;
+}
+
+.SignUp-wp form > button{
+  font-family: 'IBMPlexSansKR-Regular';
+  background-color: #9BA4B5;
+  color: white;
+  width: 105px;
+  height: 25px;
+  border: 1px solid #9BA4B5;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+  margin: 30px;
+  position: relative;
+  left: 27px;
+}
+
+.activedBtn{
+  background-color: #182747 !important;
+  border: 1px solid #182747 !important;
+  color: red;
+}

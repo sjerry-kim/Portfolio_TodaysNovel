@@ -1,0 +1,81 @@
+.HomePopUpBox-wp{
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 130px;
+  left: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid gray;
+  z-index: 600;
+}
+
+.HomePopUpBox-post-box{
+  height: 95%;
+  background-image: url('../img/popup02.jpeg');
+  background-size: contain;
+  background-position: center;
+}
+
+.HomePopUpBox-post-box h2{
+  font-family: 'RIDIBatang';
+  font-weight: lighter;
+  font-size: 1.3em;
+  position: relative;
+  top: 27%;
+  right: 3%;
+}
+
+.HomePopUpBox-post-box > button{
+  border: none;
+  background-color: transparent;
+  width: fit-content;
+  margin: 10px auto;
+  font-family: 'RIDIBatang';
+  font-size: 1.5em;
+  cursor: pointer;
+  position: relative;
+  top: 27%;
+  right: 3%;
+  color: rgb(57, 56, 56);
+}
+
+.HomePopUpBox-post-box > button:hover{
+  color: black;
+  border-bottom: 1px solid black;
+  transition: 0.5s;
+}
+
+.HomePopUpBox-Btn-box{
+  border-top: 1px solid black;
+  background-color: white;
+  margin: 0px;
+  padding: 5px;
+}
+
+.HomePopUpBox-Btn-box button{
+  font-family: 'RIDIBatang';
+  border: 1px solid darkgray;
+  background-color: transparent;
+  padding: 3px 7px;
+  margin: 0 8px;
+  position: relative;
+  right: 3%;
+}
+
+.HomePopUpBox-Btn-box button:hover{
+  border: 1px solid black;
+  transition: 1s;
+}
+
+.HomePopUpBox-display-none{
+  display: none;
+}
+
+@media screen and (max-width: 703px){
+  .HomePopUpBox-wp{
+    width: 200px;
+    left: 150px;
+  }
+}

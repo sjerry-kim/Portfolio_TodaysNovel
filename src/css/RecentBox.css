@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.DetailRecentBox-wp{
+  position: fixed;
+  top: 19%;
+  right: 5%;
+  width: 130px;
+  height: fit-content;
+  max-height: 650px;
+  border: 1px solid rgb(222, 219, 219);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 15px rgb(208, 208, 208);
+}
+
+.DetailRecentBox-wp h4{
+  font-size: 1.3em;
+  margin: 15px 0 20px 0;
+  font-family: 'IBMPlexSansKR-Regular';
+  color: #567189
+}
+
+.display-none{
+  display: none;
+}
+
+.DetailRecentBox-div {
+  width: 100px;
+  cursor: pointer;
+}
+
+.DetailRecentBox-div img{
+  width: 60px;
+}
+
+.DetailRecentBox-div p{
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 1440px){
+  .DetailRecentBox-wp{
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .DetailRecentBox-wp{
+    display: none;
+  }
+}

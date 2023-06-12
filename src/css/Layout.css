@@ -1,0 +1,26 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+} */
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.Layout-wp{
+  overflow: hidden;
+}
+
+.display-none{
+  display: none;
+}
+
+.display-inblock{
+  display: inline-block;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}

@@ -1,0 +1,87 @@
+.SignIn-wp{
+  margin: 0;
+  padding: 100px;
+}
+
+.SignIn-wp form{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 300px;
+  margin: 80px auto;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SignIn-wp form label{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 50%;
+  font-size: 0.9em;
+  color: #182747;
+  font-weight: bold;
+}
+
+.SignIn-wp form input:nth-child(2), .SignIn-wp form input:nth-child(4) {
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 180px;
+  height: 15px;
+  margin: 5px 0px 20px 0;
+  border: 1px solid #111c3286;
+  border-radius: 5px;
+  outline: none;
+  padding: 3px;
+}
+
+
+.SignIn-signin-btn{
+  font-family: 'IBMPlexSansKR-Regular';
+  background-color: #182747;
+  color: white;
+  width: 185px;
+  height: 25px;
+  border: 1px solid #111c3286;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.SignIn-signin-btn:hover{
+  background-color: #9BA4B5;
+  border: 1px solid #9BA4B5;
+}
+
+.SignIn-signup-div > p{
+  font-family: 'IBMPlexSansKR-Regular';
+  color: gray;
+  font-size: 0.9em;
+}
+
+.SignIn-signup-div button{
+  font-family: 'IBMPlexSansKR-Regular';
+  background-color: #9BA4B5;
+  color: white;
+  width: 105px;
+  height: 25px;
+  border: 1px solid #9BA4B5;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.SignIn-signup-div button:hover{
+  background-color: #182747;
+  border: 1px solid #182747;
+}
+
+@media screen and (max-width: 1440px){
+  .SignIn-wp{
+    height: 70vh;
+  }
+
+  .SignIn-wp form{
+    width: 30%;
+    height: 150px;
+  }
+}

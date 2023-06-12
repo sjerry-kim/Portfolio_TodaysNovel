@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.NavbarSide-wp{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 33%;
+  padding: 5px 10px;
+}
+
+.NavbarSide-wp > a{
+  margin: 10px;
+  text-decoration: none;
+  color: #3C4048;
+  cursor: pointer;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.NavbarSide-wp > a:hover{
+  color: #567189;
+}
+
+.NavbarSide-wp > a> svg{
+  margin-top: 2px;
+  color: #3C4048;
+  font-size: 1.2em;
+}
+
+.NavbarSide-wp > a> svg:hover{
+  color: #567189;
+  
+}
+
+.NavbarSide-wp-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.NavbarSide-wp-div > p{
+  margin: 13px 5px;
+  font-family: 'IBMPlexSansKR-Regular';
+  font-size: 0.9em;
+}
+
+.NavbarSide-wp-div > button{
+  margin: 10px 5px;
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.NavbarSide-wp-div > button:hover{
+  color: #567189;
+}
+
+.NavbarSide-wp-div > a{
+  margin: 10px;
+  text-decoration: none;
+  color: #3C4048;
+  cursor: pointer;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.NavbarSide-wp-div > a> svg{
+  margin-top: 2px;
+  color: #3C4048;
+  font-size: 1.2em;
+}
+
+.NavbarSide-wp-div > a> svg:hover{
+  color: #567189;
+}
+
+.NavbarSide-cartbadge{
+  background-color: #CDE2A0;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  position: relative;
+  right: 16px;
+  top: 13px;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1440px){
+  .NavbarSide-wp > a> svg{
+    font-size: 1em;
+  }
+
+  .NavbarSide-wp-div > p{
+    font-size: 0.8em;
+  }
+
+  .NavbarSide-wp-div > button{
+    font-size: 14px;
+  }
+
+  .NavbarSide-wp-div > a> svg{
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1350px){
+  .NavbarSide-wp-div > p{
+    display: none;
+  }
+
+  .NavbarSide-wp-div > button{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .NavbarSide-wp-div > button{
+    font-size: 11px;
+    margin: 8px 0 0 0;
+    position: relative;
+    right: 3px;
+  }
+
+  .NavbarSide-wp > a{
+    font-size: 0.7em;
+    margin: 6px;
+    margin-top: 10px;
+  }
+
+  .NavbarSide-wp > a > svg{
+    font-size: 0.9em;
+  }
+
+  .NavbarSide-wp-div > a{
+    margin: 6px;
+  }
+
+  .NavbarSide-wp-div > a> svg{
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.DetailReview-wp{
+  width: 63%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DetailReview-wp h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin-left: 35px;
+  font-size: 1.7em;
+  margin: 0 35px;
+  position: relative;
+  right: 40%;
+}
+
+.DetailReview-review-box{
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px;
+}
+
+.DetailReview-review-box > p {
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 30px auto;
+}
+
+.DetailReview-review-div{
+  width: 100%;
+}
+
+.DetailReview-review-commentbox{
+  width: 100%;
+}
+
+.DetailReview-review-user-star{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.DetailReview-review-user-star> p {
+  width: 15%;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+.DetailReview-review-user-star > div{
+  width: 85%;
+  text-align: start;
+  margin: 10px 0;
+  padding: 0 30px;
+}
+
+.DetailReview-review-user-star > div > p {
+  margin: 0;
+}
+
+.DetailReview-review-user-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.DetailReview-review-user-info > p{
+  margin-left: 20px;
+  color: gray;
+  font-size: 0.9em;
+}
+
+.DetailReview-review-user-info > button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.DetailReview-review-user-info > button:hover{
+  color: black;
+}
+
+@media screen and (max-width: 1440px){
+  .DetailReview-wp{
+    width: 69%;
+  }
+
+  .DetailReview-review-box{
+    width: 98%;
+  }
+
+  .DetailReview-review-user-star> p{
+    width: 20%;
+  }
+
+}
+
+@media screen and (max-width: 1400px){
+  .DetailReview-wp{
+    width: 78%;
+  }
+
+  .DetailReview-review-user-star> p {
+    width: 24%;
+    font-size: 1.3em;
+    margin: 0;
+    text-align: start;
+  }
+  
+  .DetailReview-review-user-star > div{
+    width: 76%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .DetailReview-wp{
+    width: 87%;
+  }
+
+  .DetailReview-wp h1{
+    text-align: start;
+    margin: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 780px){
+  .DetailReview-review-user-star{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .DetailReview-review-user-star> p {
+    width: 100%;
+    text-align: start;
+  }
+
+  .DetailReview-review-user-star > div > p {
+    font-size: 0.9em;
+  }
+  
+  .DetailReview-review-user-star > div{
+    width: 100%;
+    padding: 3px;
+  }
+}

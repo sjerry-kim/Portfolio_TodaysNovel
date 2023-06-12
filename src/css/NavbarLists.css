@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.NavbarLists-wp{
+  margin: 0;
+  padding: 0;
+  width: 33%;
+}
+
+#NavbarLists-hamburger {
+  display: none;
+}
+
+.NavbarLists-menu {
+  display: block;
+  background-color: white;
+  width: 0px;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 50px;
+  position: fixed;
+  z-index: 999;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.NavbarLists-menu-div{
+  margin: 50px 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.NavbarLists-menu-div a{
+  width: 200px;
+  text-align: start;
+  margin: 0 0 30px 20px;
+  text-decoration: none;
+  font-family: 'IBMPlexSansKR-Regular';
+  font-size: 1.2em;
+  color: #3C4048;
+}
+
+.NavbarLists-menu-div a:hover{
+  color: #567189;
+}
+
+.NavbarLists-menuicon {
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  display: block;
+  cursor: pointer;
+  height: 21px;
+  width: 25px;
+}
+
+.NavbarLists-menuicon span {
+  display: block;
+  left: 20px;
+  top: 45px;
+  width: 25px;
+  height: 2px;
+  background-color: #3C4048;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -ms-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.NavbarLists-menuicon span::after, .NavbarLists-menuicon span::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #3C4048;
+  -webkit-transition-property: margin, -webkit-transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s, 0;
+  -moz-transition-delay: 0.2s, 0;
+  -ms-transition-delay: 0.2s, 0;
+  -o-transition-delay: 0.2s, 0;
+  transition-delay: 0.2s, 0;
+}
+
+.NavbarLists-menuicon span::before {
+  margin-top: -8px;
+}
+.NavbarLists-menuicon span::after {
+  margin-top: 8px;
+}
+
+#NavbarLists-hamburger:checked ~ .NavbarLists-menu {
+  width: 340px;
+}
+
+#NavbarLists-hamburger:checked ~ .NavbarLists-menuicon span {
+  background-color: rgba(0, 0, 0, 0);
+}
+#NavbarLists-hamburger:checked ~ .NavbarLists-menuicon span::before, #NavbarLists-hamburger:checked ~ .NavbarLists-menuicon span::after {
+  margin-top: 0px;
+  -webkit-transition-delay: 0, 0.2s;
+  -moz-transition-delay: 0, 0.2s;
+  -ms-transition-delay: 0, 0.2s;
+  -o-transition-delay: 0, 0.2s;
+  transition-delay: 0, 0.2s;
+} 
+#NavbarLists-hamburger:checked ~ .NavbarLists-menuicon span::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#NavbarLists-hamburger:checked ~ .NavbarLists-menuicon span::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.NavbarLists-transparents{
+  position: absolute;
+  width: 100vw;
+  height: 500vh;
+  background-color: transparent;
+  display: none;
+  border: 10px solid red;
+}

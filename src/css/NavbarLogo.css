@@ -1,0 +1,11 @@
+.NavbarLogo-wp{
+  margin: auto;
+  width: 100%;
+}
+
+.NavbarLogo-wp img{
+  margin: auto;
+  width: 260px;
+  margin-top: 10px;
+  cursor: pointer;
+}

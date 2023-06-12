@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MyPageReview-wp{
+  margin: 0;
+  padding: 170px;
+}
+
+.MyPageReview-review-box h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  font-size: 1.8em;
+  margin: 3px auto;
+  font-weight: lighter;
+  color: #182747;
+}
+
+.MyPageReview-review-box{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.MyPageReview-review-div {
+  width: 35%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.MyPageReview-review-div img{
+  width: 45%;
+  margin-right: 20px;
+}
+
+.MyPageReview-review-text-div{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.MyPageReview-review-star-div{
+  display: flex;
+  margin: 0;
+}
+
+.MyPageReview-review-star-div p span{
+  letter-spacing: 14px;
+}
+
+.MyPageReview-review-star-div .cbdqLQ{
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+
+.MyPageReview-review-text-div svg{
+  width: 35px;
+  margin: 5px auto;
+  position: relative;
+  right: 10px;
+}
+
+.MyPageReview-review-text-div p{
+  font-family: 'IBMPlexSansKR-Regular';
+  text-align: start;
+  color: rgb(60, 60, 60);
+}
+
+.MyPageReview-review-text-div > p:first-child > span{
+  letter-spacing: 14px;
+  margin: 0;
+}
+
+.MyPageReview-review-text-div p span{
+  margin-right: 15px;
+}
+
+.MyPageReview-review-text-div textarea{
+  resize: none;
+  border: 1px solid darkgray;
+  outline: none;
+  margin-top: 10px ;
+}
+
+.MypageReview-review-btn-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.MypageReview-review-btn-div button{
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #182747;
+  color: white;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px){
+  .MyPageReview-wp{
+    margin: 110px;
+    padding: 0px;
+  }
+
+  .MyPageReview-review-div {
+    width: 50%;
+  }
+}

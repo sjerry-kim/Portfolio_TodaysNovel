@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.DetailProductsComment-wp{
+  width: 63%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.DetailProductsComment-wp h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin-left: 35px;
+  font-size: 1.7em;
+  margin: 0 35px;
+}
+
+.DetailProductsComment-typingdiv{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 10px;
+}
+
+.DetailProductsComment-typingdiv textarea {
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 96%;
+  height: 6.25em;
+  border: 1px solid gray;
+  outline: none;
+  resize: none;
+}
+
+.DetailProductsComment-typingdiv button {
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 10%;
+  height: 30px;
+  border: none;
+  background-color: gray;
+  color: white;
+}
+
+
+.DetailProductsComment-printdiv{
+  /* 여기!! */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.DetailProductsComment-qna{
+  display: flex;
+  /* 여기!!!!! */
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  border-bottom: 1px solid #CECECE;
+  text-align: start;
+  margin: auto;
+}
+
+.user-qna{
+  background-color: rgba(232, 232, 232, 0.73);
+}
+
+.DetailProductsComment-qna-comment{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 95%;
+}
+
+.DetailProductsComment-qna-comment img {
+  width: 15px;
+  height: 18px;
+  margin: 16px 10px 16px 0;
+}
+
+.DetailProductsComment-qna-comment p {
+  color: gray;
+  font-family: 'IBMPlexSansKR-Regular';
+  padding-left: 20px;
+}
+
+.DetailProductsComment-qna button{
+  border: none;
+  background-color: transparent;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.DetailProductsComment-qna button:hover{
+  color: gray;
+}
+
+.public-div{
+  display: flex;
+  justify-content: start;
+  width: 80%;
+}
+
+.public-div p{
+  color: black;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.secret-div{
+  display: flex;
+}
+
+.DetailProductsComment-qna-username{
+  text-align: end;
+  width: 15%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.DetailProductsComment-qna-username p{
+  font-size: 0.9em;
+  font-family: 'IBMPlexSansKR-Regular';
+}
+
+.other-user{
+  color: gray;
+}
+
+@media screen and (max-width: 1440px){
+  .DetailProductsComment-wp{
+    width: 73%;
+  }
+
+  .DetailProductsComment-typingdiv{
+    width: 95%;
+  }
+
+  .DetailProductsComment-typingdiv textarea {
+    width: 96%;
+  }
+
+  .DetailProductsComment-qna{
+    width: 90%;
+  }
+
+  .DetailProductsComment-qna-comment img {
+    width: 10px;
+    height: 14px;
+    margin: 18px 0;
+  }
+
+  .DetailProductsComment-qna-comment p {
+    font-size: 0.9em;
+  }
+
+  .DetailProductsComment-qna-username p{
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .DetailProductsComment-wp{
+    width: 80%;
+  }
+
+  .DetailProductsComment-wp h1{
+    margin: 0 10px;
+    text-align: start;
+  }
+
+  .DetailProductsComment-typingdiv{
+    width: 97%;
+  }
+
+  .DetailProductsComment-typingdiv textarea {
+    width: 99%;
+  }
+
+  .DetailProductsComment-qna{
+    width: 95%;
+  }
+
+  .DetailProductsComment-qna-username{
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .DetailProductsComment-wp{
+    width: 90%;
+  }
+
+  .DetailProductsComment-typingdiv button {
+    width: 15%;
+  }
+
+  .DetailProductsComment-qna{
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 780px){
+  .DetailProductsComment-typingdiv button {
+    width: 18%;
+  }
+
+  .DetailProductsComment-qna{
+    flex-direction: column;
+  }
+
+  .DetailProductsComment-qna-username{
+    width: 100%;
+  }
+
+  .DetailProductsComment-qna-comment{
+    width: 90%;
+    margin: auto;
+  }
+
+  .secret-div{
+    display: flex;
+    margin-left: 40%;
+  }
+
+  .DetailProductsComment-qna-comment p {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .DetailProductsComment-qna-username p{
+    margin: 5px 10px;
+  }
+
+  .DetailProductsComment-qna button{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .DetailProductsComment-typingdiv button {
+    width: 25%;
+  }
+}

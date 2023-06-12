@@ -1,0 +1,132 @@
+.NewIn-wp {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 0;
+  background-image: url("../img/newinwallpaper.avif");
+  background-size: cover;
+}
+
+.NewIn-slick-box {
+  list-style: none;
+  width: 100vw;
+  height: 800px;
+  z-index: 998;
+}
+
+.NewIn-book {
+  cursor: pointer;
+  display: block;
+  width: 420px !important;
+  height: 610px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: box-shadow 0.3s linear;
+  margin: 190px auto;
+}
+
+.NewIn-book img {
+  width: 420px;
+  height: 610px;
+  transform-origin: 0 50%;
+  transform: rotateY(0);
+  transition: all 0.45s ease;
+  object-fit: cover;
+}
+
+.NewIn-book:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25), 0 9px 20px 0 rgba(0, 0, 0, 0.45);
+}
+.NewIn-book:hover img {
+  transform: rotateY(-25deg);
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.NewIn-book::after,
+.NewIn-book::before {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 610px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: white;
+  border: 1px solid #d9d9d9;
+}
+
+.NewIn-book::before {
+  left: -5px;
+}
+
+.NewIn-book::after {
+  left: -9px;
+}
+
+.NewIn-book::after,
+.NewIn-book::before,
+.NewIn-book img,
+.NewIn-book {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.slick-dots {
+  position: relative;
+  bottom: 100px;
+}
+
+.NewIn-book-btn-box {
+  display: flex;
+  justify-content: start;
+  margin: 55px 50px;
+}
+
+.NewIn-book-btn-box button {
+  z-index: 998;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.NewIn-book-btn-cursor {
+  cursor: pointer;
+}
+
+.NewIn-book-btn-box button svg {
+  font-size: 2em;
+  color: #2a3b62;
+}
+
+@media screen and (max-width: 1440px) {
+  .NewIn-wp {
+    width: 100vw;
+    height: 98vh;
+  }
+
+  .NewIn-slick-box {
+    height: 700px;
+  }
+
+  .NewIn-book {
+    width: 320px !important;
+    height: 480px;
+    margin: 170px auto;
+  }
+
+  .NewIn-book img {
+    width: 320px;
+    height: 480px;
+  }
+
+  .NewIn-book::after,
+  .NewIn-book::before {
+    width: 320px;
+    height: 480px;
+  }
+
+  .NewIn-book-btn-box {
+    margin: 5px 54px;
+  }
+}

@@ -1,0 +1,30 @@
+.HomeFace-wp{
+  z-index: 500 !important;
+}
+
+.HomeFace-wp img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.HomeFace-btn-div{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.HomeFace-btn-div button{
+  background-color: transparent;
+  border: none;
+  margin: 5px 10px;
+}
+
+.HomeFace-btn-div button > svg{
+  font-size: 1.7em;
+  color: rgba(225,225,225,0.6)
+}
+
+.HomeFace-btn-div button > svg:hover{
+  color: #567189;
+}

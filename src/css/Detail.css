@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Detail-wp{
+  margin: 100px;
+}
+
+.Detail-product-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  margin: 11% auto;
+}
+
+.Detail-product-div h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 0 auto;
+  font-size: 1.7em;
+  text-align: start;
+  position: relative;
+  left: 35px;
+  width: 63%;
+}
+
+.Detail-product-box{
+  display: flex;
+  flex-direction: row;
+  width: 63%;
+  margin: 0 auto;
+  justify-content: start;
+}
+
+.Detail-product-box img{
+  width: 20%;
+  height: 80%;
+  object-fit: cover;
+  margin: 35px;
+  box-shadow: 5px 5px 9px gray;
+}
+
+.Detail-product-detaildiv{
+  display: flex;
+  flex-direction: column;
+  width: 68%;
+  margin: 30px;
+  text-align: start;
+}
+
+.Detail-product-detaildiv > p{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 10px 0;
+}
+
+.Detail-product-creatordiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  border-bottom: 0.8px solid gray;
+  margin-bottom: 10px;
+}
+
+.Detail-product-creatordiv > p{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin-right: 25px;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.Detail-product-creatordiv > p > span{
+  font-family: 'IBMPlexSansKR-Regular';
+  color: darkgray;
+  font-size: 0.9em;
+}
+
+.Detail-product-writerdiv{
+  font-family: 'IBMPlexSansKR-Regular';
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.Detail-product-writerdiv p{
+  margin: 10px 0;
+}
+
+.Detail-product-writerdiv p:nth-child(2){
+  font-family: 'IBMPlexSansKR-Regular';
+  margin-left: 60px;
+}
+
+.Detail-product-coupondiv{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 99.1%;
+  background-color: #E4DCCF;
+  color: rgb(63, 63, 63);
+  font-size: 0.9em;
+  padding: 3.5px;
+  text-align: center;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+
+.Detail-product-cart-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.Detail-product-modifynum{
+  display: flex;
+  width: 20%;
+  height: 38px;
+  margin: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.Detail-product-modifynum > button{
+  margin: 0;
+  font-size: 1em;
+  width: 30%;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Detail-product-modifynum p{
+  margin: auto;
+}
+
+.Detail-product-cart-div > button{
+  font-family: 'IBMPlexSansKR-Regular';
+  font-size: 1em;
+  width: 30%;
+  height: 40px;
+  background-color: #182747;
+  border: 1px solid #182747;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+  margin: 0 30px;
+}
+
+@media screen and (max-width: 1440px){
+  .Detail-product-div h1{
+    width: 73%;
+  }
+
+  .Detail-product-box{
+    width: 73%;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .Detail-product-div h1{
+    width: 82%;
+  }
+
+  .Detail-product-box{
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Detail-product-box img{
+    width: 38%;
+  }
+
+  .Detail-product-detaildiv{
+    width: 95%;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .Detail-product-div h1{
+    left: 0px;
+    width: 90%;
+    margin: 35px auto;
+  }
+
+  .Detail-product-box{
+    width: 90%;
+  }
+
+  .Detail-product-creatordiv > p{
+    margin-right: 15px;
+  }
+
+  .Detail-product-detaildiv > p{
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+  .Detail-product-writerdiv p{
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+}
+
+@media screen and (max-width: 780px){
+  .Detail-product-creatordiv{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Detail-product-creatordiv > p{
+    margin-bottom: 3px;
+    font-size: 0.7em;
+  }
+
+  .Detail-product-writerdiv p:nth-child(2){
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .Detail-product-creatordiv{
+    grid-template-columns: 1fr;
+  }
+
+  .Detail-product-modifynum{
+    width: 30%;
+  }
+
+  .Detail-product-modifynum > button{
+    width: 100%;
+  }
+
+  .Detail-product-cart-div > button{
+    width: 60%;
+  }
+}

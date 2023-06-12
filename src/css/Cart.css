@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Cart-wp {
+  margin: 0;
+  padding-top: 170px;
+}
+
+.Cart-empty {
+  margin: 80px;
+}
+
+.Cart-wp h1 {
+  font-family: "IBMPlexSansKR-Regular";
+}
+
+.Cart-itembox input {
+  accent-color: #182747;
+}
+
+.Cart-table {
+  margin: 30px auto;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+.Cart-table-head {
+  height: 50px;
+  border-top: 0.5px solid darkgray;
+  border-bottom: 0.5px solid darkgray;
+}
+
+.Cart-table-head > td {
+  font-family: "IBMPlexSansKR-Regular";
+  font-size: 0.9em;
+  color: rgb(56, 55, 55);
+}
+
+.Cart-table-head > td:nth-child(1) {
+  width: 5%;
+}
+
+.Cart-table-head > td:nth-child(2) {
+  width: 20%;
+}
+
+.Cart-table-head > td:nth-child(3) {
+  width: 30%;
+}
+
+.Cart-table-head > td:nth-child(4) {
+  width: 15%;
+}
+
+.Cart-table-head > td:nth-child(5) {
+  width: 10%;
+}
+
+.Cart-table-head > td:nth-child(6) {
+  width: 15%;
+}
+
+.Cart-table-head > td:nth-child(7) {
+  width: 5%;
+}
+
+.Cart-itemdiv {
+  height: 180px;
+}
+
+.Cart-itemdiv img {
+  width: 90px;
+  height: 130px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.Cart-itemdiv td {
+  font-family: "IBMPlexSansKR-Regular";
+  font-size: 0.9em;
+  font-weight: bold;
+  border-bottom: 0.5px solid darkgray;
+}
+
+.Cart-itemdiv-modifynum {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.Cart-itemdiv-modifynum button {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  margin: auto;
+  width: 20px;
+  cursor: pointer;
+}
+
+.Cart-itemdiv-modifynum p {
+  margin: 5px;
+}
+
+.Cart-itemdiv button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Cart-total-box {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin: 30px auto;
+  width: 70%;
+  font-size: 1.4em;
+  font-weight: bold;
+  word-spacing: 0.2em;
+}
+
+.Cart-total-box > button {
+  width: 95px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #9ba4b5;
+  color: white;
+  cursor: pointer;
+}
+
+.Cart-total-box > p > span:nth-child(1),
+.Cart-total-box > p > span:nth-child(2) {
+  font-size: 0.8em !important;
+  font-weight: normal;
+}
+
+.Cart-purchase-box > button {
+  width: 8%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #182747;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .Cart-wp {
+    padding-bottom: 80px;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .Cart-wp {
+    overflow: auto;
+  }
+
+  .Cart-table {
+    width: 75%;
+  }
+
+  .Cart-total-box {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 780px){
+  .Cart-table {
+    width: 80%;
+  }
+
+  .Cart-table-head > td{
+    font-size: 0.7em;
+  }
+
+  .Cart-itemdiv td {
+    font-size: 0.7em;
+  }
+
+  .Cart-itemdiv img {
+    width: 70px;
+    height: 110px;
+  }
+
+  .Cart-total-box {
+    width: 80%;
+  }
+
+  .Cart-itemdiv-modifynum button {
+    width: 15px;
+  }
+
+  .Cart-total-box > p{
+    font-size: 0.8em;
+  }
+
+  .Cart-purchase-box > button {
+    width: 78.875px;
+    height: 38px;
+    padding: 1px 6px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .Cart-total-box > p{
+    font-size: 0.6em;
+  }
+
+  .Cart-purchase-box > button {
+    width: 65px;
+    height: 33px;
+    padding: 1px 6px;
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.MyPage-wp{
+  margin: 0;
+  padding: 150px;
+  overflow: auto;
+}
+
+.MyPage-profile{
+  border: 0.5px solid darkgray;
+  border-radius: 2px;
+  width: 60%;
+  padding: 40px 50px 10px 50px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.MyPage-profile h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 0px auto 15px auto;
+}
+
+.MyPage-profile > p{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 10px auto 30px auto;
+}
+
+.MyPage-profile-div {
+  width: 100%;
+  display: flex;
+  margin: 5px 90px;
+}
+
+.MyPage-profile-div label{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 100px;
+  text-align: start;
+}
+
+.MyPage-profile-div p{
+  margin: 0;
+}
+
+.MyPage-profile input{
+  font-family: 'IBMPlexSansKR-Regular';
+  border: 1px solid darkgray;
+  border-radius: 2px;
+  padding: 3px;
+  background-color: transparent;
+  font-size: 0.9em;
+  color: gray;
+  width: 170px;
+}
+
+.MyPage-profile-adress-box{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.MyPage-profile-adress-box button{
+  width: fit-content;
+  border: none;
+  background-color: gray;
+  color: white;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.MyPage-profile-adress-div{
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+}
+
+.MyPage-adress-input input{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 280px;
+}
+
+.MyPage-profile-adress-div > input + p {
+  margin: auto 10px;
+}
+
+.MyPage-profile-adress-div p{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: auto 10px;
+  font-size: 0.9em;
+  color: gray;
+}
+
+.MyPage-check-pw {
+  font-family: 'IBMPlexSansKR-Regular';
+  border: 0.5px solid darkgray !important;
+  border-radius: 3px;
+  padding: 2px;
+  margin: 0 20px;
+  outline: none;
+}
+
+.MyPage-check-pw + p{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: auto 10px;
+  font-size: 0.9em;
+  color: gray;
+
+}
+
+.MyPage-profile > button {
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 100px;
+  margin: 50px auto;
+  padding: 10px;
+  border: none;
+  background-color: #567189;
+  color: white;
+  cursor: pointer;
+}
+
+.MyPage-purchasedProducts{
+  border-radius: 2px;
+  width: 66%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.MyPage-purchasedProducts h1{
+  font-family: 'IBMPlexSansKR-Regular';
+  margin: 25px auto;
+}
+
+.MyPage-purchasedProducts-table{
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse
+}
+
+.MyPage-tr-head{
+  font-family: 'IBMPlexSansKR-Regular';
+  width: 100%;
+  height: 50px;
+  border-top: 0.5px solid darkgray;
+  border-bottom: 0.5px solid darkgray;
+}
+
+.MyPage-tr-head td{
+  font-family: 'IBMPlexSansKR-Regular';
+  font-size: 0.9em;
+  color: rgb(56, 55, 55);
+}
+
+.MyPage-tr-head td:nth-child(1){
+  width: 35%;
+}
+
+.MyPage-tr-head td:nth-child(2){
+  width: 15%;
+}
+
+.MyPage-tr-head td:nth-child(3){
+  width: 10%;
+}
+
+.MyPage-tr-head td:nth-child(4){
+  width: 20%;
+}
+
+.MyPage-tr-head td:nth-child(5){
+  width: 20%;
+}
+
+.MyPage-tr{
+  height: 150px;
+  border-bottom: 0.5px solid darkgray;
+}
+
+.MyPage-tr td > img{
+  width: 80px;
+  cursor: pointer;
+}
+
+.MyPage-review-btn-able{
+  border: 0.8px solid gray;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+.MyPage-review-btn-able:hover{
+  background-color: #182747;
+  color: white;
+}
+
+.MyPage-review-btn-disable{
+  border: 0.8px solid darkgray;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: gray;
+}
+
+.MyPage-purchasedProducts > p{
+  margin: auto;
+}
+
+@media screen and (max-width: 1440px){
+  .MyPage-profile{
+    width: 684px;
+  }
+
+  .MyPage-purchasedProducts{
+    border-radius: 2px;
+    width: 684px;
+    margin: 100px auto;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .MyPage-profile-div p{
+    margin: 0;
+  }
+
+  .MyPage-check-pw{
+    margin: 0 10px;
+  }
+}
