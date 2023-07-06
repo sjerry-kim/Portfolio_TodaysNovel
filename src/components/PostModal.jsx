@@ -1,13 +1,10 @@
 import REACT, { useEffect, useRef, useState } from "react";
 import DaumPostCode from "react-daum-postcode";
 import { useSelector } from "react-redux";
-import '../css/PostModal.css';
+import "../css/PostModal.css";
 
 const PostModal = (props) => {
-  const {postModal, setPostModal, setPost, setRestAdress} = props;
-  const user = useSelector((state) => state.user);
-  const sessionId = sessionStorage.getItem("id");
-  const currentUser = user.userList.find((user) => user.id == sessionId);
+  const { postModal, setPostModal, setPost, setRestAdress } = props;
   // Modal 창을 useRef로 취득
   const modalRef = useRef(null);
 
@@ -22,11 +19,9 @@ const PostModal = (props) => {
 
     // 이벤트 핸들러 등록
     document.addEventListener("mousedown", handler);
-    
+
     // document.addEventListener('touchstart', handler); // 모바일 대응
 
-
-    
     return () => {
       // 이벤트 핸들러 해제
       document.removeEventListener("mousedown", handler);
@@ -49,21 +44,20 @@ const PostModal = (props) => {
       fullAddress += extraAddress !== "" ? ` (${extraAddress})` : "";
     }
     //fullAddress -> 전체 주소반환
-    // console.log(fullAddress);
-    // console.log(postNumber);
-    sessionStorage.setItem("signPost",postNumber);
-    sessionStorage.setItem("signAdress",fullAddress);
+    sessionStorage.setItem("signPost", postNumber);
+    sessionStorage.setItem("signAdress", fullAddress);
     setPost(postNumber);
     setRestAdress(fullAddress);
   };
 
-  return(
-  <div ref={modalRef}
-    className={`PostModal-div ${postModal? "PostModal-open" : ""}`}>
-    <DaumPostCode 
-    onComplete={handleComplete} className="daum-post-code" />
-  </div>
-  )
+  return (
+    <div
+      ref={modalRef}
+      className={`PostModal-div ${postModal ? "PostModal-open" : ""}`}
+    >
+      <DaumPostCode onComplete={handleComplete} className="daum-post-code" />
+    </div>
+  );
 };
 
 export default PostModal;

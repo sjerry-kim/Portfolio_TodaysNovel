@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
 import "../css/Shop.css";
 import { addItem } from "../modules/cart";
 import { changeCart } from "../modules/user";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faBasketShopping,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { addRecentItem, deleteRecentItem } from "../modules/recentBox";
 
 const Shop = () => {
-  const shopItems = useSelector((state) => state.mainState);
-  const cart = useSelector((state) => state.cart);
-  const user = useSelector((state) => state.user);
-  const recentBox = useSelector((state) => state.recentBox);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // mainState.js 셀렉
+  const shopItems = useSelector((state) => state.mainState);
+  // cart.js 셀렉
+  const cart = useSelector((state) => state.cart);
+  // user.js 셀렉
+  const user = useSelector((state) => state.user);
+  // recentBox.js 셀렉
+  const recentBox = useSelector((state) => state.recentBox);
+  // 로그인 접근제한 리다이렉트용 로그인 유무 확인용 sessionId, currentUser
   const sessionId = sessionStorage.getItem("id");
   const currentUser = user.userList.find((user) => user.id == sessionId);
+  //
   const sessionCart = sessionStorage.getItem("cart");
   const [searchWord, setSearchWord] = useState("");
   const [searchedItems, setSearchedItems] = useState("");
@@ -47,28 +49,27 @@ const Shop = () => {
     item.tag.includes(`${category}`)
   );
 
+  // 로그인 전후, 장바구니 유무에 따른 확인 및 장바구니 목록 추가하기
   useEffect(() => {
-    console.log(cart);
+    // cart.js state를 가져와서 json으로 변환
     const stringfyCart = JSON.stringify(cart);
+    // 로그인 전과 후
     sessionStorage.setItem("cart", stringfyCart);
     let parseCart = JSON.parse(sessionCart);
-    console.log(currentUser);
-    // 옵셔널 체이닝 (optional chaining)🔥
     if (parseCart?.[0] == undefined) {
       console.log("장바구니 추가 상품 없음");
     } else if (currentUser && parseCart[0].id != currentUser.id) {
-      // cart.forEach((p) => (p.id = sessionId));
       console.log("로그인 하기 전 장바구니 있음");
-      console.log(cart);
+      // console.log(cart);
     } else if (currentUser && parseCart[0].id == currentUser.id) {
-      console.log(parseCart[0].id);
+      // console.log(parseCart[0].id);
       console.log("장바구니 id 변경됨");
       dispatch(changeCart(parseCart));
-      console.log(currentUser.cart);
+      // console.log(currentUser.cart);
     }
-    console.log("댕짜증");
   }, [cart, sessionCart]);
 
+  // 장바구니 추가하기
   const insertItem = (item) => {
     dispatch(
       addItem({
@@ -86,6 +87,9 @@ const Shop = () => {
     console.log(cart);
   };
 
+  // 최근 본 항목 추가
+  // newIn 페이지와 Shop에서 접속한 아이템 목록이 일치해야하기 때문에 redux와 세션 모두 넣어줌
+  // 중복된 아이템은 if문으로 걸러줌
   const pushRecentBox = (item) => {
     const sameItem = recentBox.find((i) => i.title == item.title);
     console.log(sameItem);
@@ -145,9 +149,6 @@ const Shop = () => {
             <img src={require(`../img/${item.image}`)} alt="no image"></img>
             <figcaption>
               <p>{item.title}</p>
-              {/* <p>
-                {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원
-              </p> */}
               <div className="Shop-fig-div">
                 <button
                   title="상세페이지로 이동"
@@ -174,9 +175,7 @@ const Shop = () => {
                     }
                   }}
                 >
-                  <p>
-                    장바구니
-                  </p>
+                  <p>장바구니</p>
                   {/* <FontAwesomeIcon icon={faBasketShopping} /> */}
                 </button>
               </div>

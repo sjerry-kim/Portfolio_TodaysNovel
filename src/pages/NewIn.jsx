@@ -13,9 +13,12 @@ import { faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 const NewIn = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  // mainState.js 셀렉
   const shopItems = useSelector((state) => state.mainState);
+  // recentBox.js 셀렉
   const recentBox = useSelector((state) => state.recentBox);
   const shopItemsLength = shopItems.length;
+  // 최신순으로 도서 5개만 슬릭에 추가
   const NewInItems = shopItems.slice(shopItemsLength - 5, shopItemsLength);
   const [play, setPlay] = useState(true);
   const slickRef = useRef(null);
@@ -32,6 +35,9 @@ const NewIn = () => {
     pauseOnHover: false,
   };
 
+  // 슬릭 도서 이미지 클릭 시 최근 본 항목(recentBox.js)에 추가
+  // newIn 페이지와 Shop에서 접속한 아이템 목록이 일치해야하기 때문에 redux와 세션 모두 넣어줌
+  // 중복된 아이템은 if문으로 걸러줌
   const pushRecentBox = (item) => {
     const sameItem = recentBox.find((i) => i.title == item.title);
     console.log(sameItem);
@@ -50,6 +56,7 @@ const NewIn = () => {
 
   return (
     <div className="NewIn-wp">
+      {/* 슬릭 */}
       <Slider ref={slickRef} {...settings} className="NewIn-slick-box">
         {NewInItems.map((item) => (
           <div
@@ -64,9 +71,10 @@ const NewIn = () => {
         ))}
       </Slider>
 
+      {/* 슬릭 컨트롤러 */}
       <div className="NewIn-book-btn-box">
         <button
-          className={play ? "NewIn-book-btn-cursor" :""}
+          className={play ? "NewIn-book-btn-cursor" : ""}
           disabled={play ? false : true}
           onClick={() => {
             console.log("확인");
@@ -84,7 +92,7 @@ const NewIn = () => {
           )}
         </button>
         <button
-          className={play ? "":"NewIn-book-btn-cursor"}
+          className={play ? "" : "NewIn-book-btn-cursor"}
           disabled={play ? true : false}
           onClick={() => {
             setPlay(!play);

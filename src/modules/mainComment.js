@@ -1,31 +1,29 @@
-import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const name = "mainComment";
 const initialState = [
   {
-    productId : 2,
+    productId: 2,
     commentId: 0,
-    commentText: "유잼",
-    userName: "일유닝",
-    userId : "일유닝"
-  }
+    commentText: "재밌어요!",
+    userName: "testUser",
+    userId: "testUSer",
+  },
 ];
 
 export const mainComment = createSlice({
   name,
   initialState,
-  reducers :{
-    addComment : (state, action) => {
+  reducers: {
+    addComment: (state, action) => {
       state.push(action.payload);
     },
-    deleteComment : (state, action) => {
-      return state.filter((c) => (
-        c.commentId !== action.payload.commentId
-      ))
-    }
-  }
-})
+    deleteComment: (state, action) => {
+      return state.filter((c) => c.commentId !== action.payload.commentId);
+    },
+  },
+});
 
-export const {addComment, deleteComment} = mainComment.actions;
+export const { addComment, deleteComment } = mainComment.actions;
 
 export default mainComment.reducer;

@@ -4,27 +4,33 @@ import { useNavigate, useParams } from "react-router-dom";
 import RecentBox from "../components/RecentBox";
 import DetailProductsComment from "../components/DetailProductsComment";
 import DetailReview from "../components/DetailReview";
-
 import "../css/Detail.css";
-import { addItem, decrementItem, incrementItem } from "../modules/cart";
+import { addItem } from "../modules/cart";
 import { useState } from "react";
 
 const Detail = () => {
-  const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // useParams로 아이디를 구분해서 상세페이지 구현
+  const { id } = useParams();
+  // mainState.js 셀렉
   const mainItems = useSelector((state) => state.mainState);
+  // cart.js 셀렉
   const cart = useSelector((state) => state.cart);
+  // mainState의 상품 목록 중 useParams id와 동일한 id를 가진 동일한 상품을 찾아줌
   const products = mainItems.find((p) => p.itemId == id);
+  // 해당 상품의 리뷰를 가져옴
   const productsReviews = products.reviews;
+  // mainReview.js 셀렉
   const mainReviews = useSelector((state) => state.mainReview);
+  // useParams id와 동일한 id를 가진 동일한 상품의 리뷰를 찾아줌
   const reviews = mainReviews.filter((r) => r.itemId == id);
+  // 상품 구매 갯수 state
   const [itemTotalCount, setItemTotalCount] = useState(1);
+  // 장르 태그 가져오기
+  const productTag = products.tag.filter((t) => t != "전체");
 
-  useEffect(() => {
-    console.log(products);
-  });
-
+  // 장바구니 추가
   const insertItem = (item) => {
     dispatch(
       addItem({
@@ -38,10 +44,7 @@ const Detail = () => {
         isChecked: item.isChecked,
       })
     );
-    console.log(cart);
   };
-
-  const productTag = products.tag.filter((t) => t != "전체");
 
   return (
     <div className="Detail-wp">
@@ -83,10 +86,12 @@ const Detail = () => {
                 <span> {tag} </span>
               ))}
             </p>
-            <div className="Detail-product-coupondiv"
-              onClick={()=>{
-                alert("현재 받을 수 있는 할인쿠폰이 없습니다.")
-              }}>
+            <div
+              className="Detail-product-coupondiv"
+              onClick={() => {
+                alert("현재 받을 수 있는 할인쿠폰이 없습니다.");
+              }}
+            >
               할인 쿠폰 받으러 가기 !
             </div>
             <div className="Detail-product-cart-div">

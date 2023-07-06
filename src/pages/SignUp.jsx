@@ -8,11 +8,14 @@ import PostModal from "../components/PostModal";
 import NotFound from "./NotFound";
 
 const SignUp = () => {
-  const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // user.js 셀렉
+  const user = useSelector((state) => state.user);
+  // 로그인 접근제한 리다이렉트용 로그인 유무 확인용 sessionId, currentUser
   const sessionId = sessionStorage.getItem("id");
   const currentUser = user.userList.find((user) => user.id == sessionId);
+  // 회원가입 데이터 state
   const [id, setId] = useInput("");
   const [pw, setPw] = useInput("");
   const [name, setName] = useInput("");
@@ -22,9 +25,10 @@ const SignUp = () => {
   const [restAdress, setRestAdress] = useState("");
   const [additionalAdress, setAdditionalAdress] = useInput("");
   const [isActive, setIsActive] = useState(false);
-  // Modal
+  // 모달 state
   const [postModal, setPostModal] = useState(false);
 
+  // 회원가입 정보를 모두 입력시 sign up 버튼 활성화를 위한 useEffect
   useEffect(() => {
     if (
       id &&
@@ -42,6 +46,7 @@ const SignUp = () => {
     }
   }, [id, pw, name, tel, email, post, restAdress, additionalAdress]);
 
+  // 같은 아이디나 같은 이메일 가입을 막기위한 함수
   const findUser = (newUser) => {
     const sameId = user.userList.find((user) => user.id == id && user.pw == pw);
     const sameEmail = user.userList.find((user) => user.email == email);

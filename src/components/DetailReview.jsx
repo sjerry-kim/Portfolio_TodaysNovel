@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteReview, modifyReview } from "../modules/mainReview";
+import { modifyReview } from "../modules/mainReview";
 import styled from "styled-components";
 import { FaStar } from "react-icons/fa";
 import MainReviewModal from "./DetailReviewModal";
@@ -9,7 +9,7 @@ import "../css/DetailReview.css";
 import ReviewPaging from "./ReviewPaging";
 
 const DetailReview = (props) => {
-  const { productsReviews, reviews } = props;
+  const { reviews } = props;
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const sessionId = sessionStorage.getItem("id");
@@ -98,24 +98,24 @@ const DetailReview = (props) => {
                     </div>
                   </div>
                   <div className="DetailReview-review-user-info">
-                  {currentUser ? (
-                    currentUser.id == r.userId ? (
-                      <button
-                        onClick={() => {
-                          // dispatch(deleteReview(r));
-                          sessionStorage.setItem("reviewId", r.reviewId);
-                          setReviewModal(true);
-                          dispatch(modifyReview(r));
-                        }}
-                      >
-                        수정하기
-                      </button>
+                    {currentUser ? (
+                      currentUser.id == r.userId ? (
+                        <button
+                          onClick={() => {
+                            // dispatch(deleteReview(r));
+                            sessionStorage.setItem("reviewId", r.reviewId);
+                            setReviewModal(true);
+                            dispatch(modifyReview(r));
+                          }}
+                        >
+                          수정하기
+                        </button>
+                      ) : (
+                        ""
+                      )
                     ) : (
                       ""
-                    )
-                  ) : (
-                    ""
-                  )}
+                    )}
                     <p>{r.userName}</p>
                     <p>{r.date}</p>
                   </div>

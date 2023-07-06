@@ -1,18 +1,12 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../css/DetailProductsComment.css";
-import {
-  addComment,
-  deleteComment,
-  modifyComment,
-} from "../modules/mainComment";
-import ReviewPaging from "./ReviewPaging";
+import { addComment, deleteComment } from "../modules/mainComment";
 
 let commentId = 3;
 
 const DetailProductsComment = (props) => {
-  const { id, mainItems, products } = props;
+  const { id } = props;
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const sessionId = sessionStorage.getItem("id");
@@ -20,10 +14,6 @@ const DetailProductsComment = (props) => {
   const mainComment = useSelector((state) => state.mainComment);
   const mainCommentId = mainComment.filter((c) => c.productId == id);
   const [comment, setComment] = useState("");
-
-  useEffect(() => {
-    console.log(currentUser);
-  }, []);
 
   const InsertComment = () => {
     dispatch(
@@ -57,10 +47,10 @@ const DetailProductsComment = (props) => {
         />
         <button
           onClick={() => {
-            if(comment){
+            if (comment) {
               InsertComment();
-            }else{
-              alert("문의사항을 입력하세요")
+            } else {
+              alert("문의사항을 입력하세요");
             }
           }}
         >
@@ -68,7 +58,7 @@ const DetailProductsComment = (props) => {
         </button>
       </div>
       <div className="DetailProductsComment-printdiv">
-        { mainCommentId.map((c, i) => (
+        {mainCommentId.map((c, i) => (
           <div
             key={i}
             className={`DetailProductsComment-qna ${
@@ -90,7 +80,7 @@ const DetailProductsComment = (props) => {
                 <button
                   onClick={() => {
                     dispatch(deleteComment(c));
-                    alert("문의사항을 삭제하였습니다")
+                    alert("문의사항을 삭제하였습니다");
                   }}
                 >
                   X
@@ -98,7 +88,11 @@ const DetailProductsComment = (props) => {
               ) : (
                 ""
               )}
-              <p className={ currentUser && currentUser.id == c.userId ? "" : "other-user" }>
+              <p
+                className={
+                  currentUser && currentUser.id == c.userId ? "" : "other-user"
+                }
+              >
                 {c.userName}
               </p>
             </div>

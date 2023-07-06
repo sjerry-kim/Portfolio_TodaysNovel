@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Pagination from "react-js-pagination";
 
-import '../css/ReviewPaging.css';
+import "../css/ReviewPaging.css";
 
 const ReviewPaging = (props) => {
-  const {reviews, page, setPage} = props;
+  const { reviews, page, setPage } = props;
 
   const handlePageChange = (page) => {
     setPage(page);
   };
 
-  return (  
+  return (
     <Pagination
       activePage={page} // 현재 페이지
       itemsCountPerPage={5} // 한 페이지랑 보여줄 아이템 갯수
@@ -21,6 +21,6 @@ const ReviewPaging = (props) => {
       onChange={handlePageChange} // 페이지 변경을 핸들링하는 함수
     />
   );
-}
+};
 
 export default ReviewPaging;

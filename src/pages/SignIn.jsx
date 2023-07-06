@@ -8,18 +8,25 @@ import NotFound from "./NotFound";
 const SignIn = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  // cart.js 셀렉
   const cart = useSelector((state) => state.cart);
+  // user.js 셀렉
   const user = useSelector((state) => state.user);
+  // 로그인 데이터 state
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
+  // 로그인 접근제한 리다이렉트용 로그인 유무 확인용 sessionId, currentUser
+  const sessionId = sessionStorage.getItem("id");
+  const currentUser = user.userList.find((user) => user.id == sessionId);
+  // user.js state에서 일치하는 회원 데이터를 착기 위한 find
   const sameAccount = user.userList.find(
     (user) => user.id == id && user.pw == pw
   );
-  const sessionId = sessionStorage.getItem("id");
-  const currentUser = user.userList.find((user) => user.id == sessionId);
+  // 로그인에 실패했을 시, id & pw 비교를 위한 sameId, samePw
   const sameId = user.userList.find((user) => user.id == id);
   const samePw = user.userList.find((user) => user.pw == pw);
 
+  // 로그인 함수
   const Login = () => {
     if (sameAccount) {
       navigate("/");

@@ -1,8 +1,6 @@
-import REACT, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../css/DetailReviewModal.css";
-import { FaStar } from "react-icons/fa";
-import styled from "styled-components";
 import { modifyReview } from "../modules/mainReview";
 
 const DetailReviewModal = (props) => {
@@ -11,7 +9,6 @@ const DetailReviewModal = (props) => {
   const user = useSelector((state) => state.user);
   const sessionId = sessionStorage.getItem("id");
   const currentUser = user.userList.find((user) => user.id == sessionId);
-  // const [text, setText] = useState("");
 
   // Modal 창을 useRef로 취득
   const modalRef = useRef(null);
@@ -44,19 +41,6 @@ const DetailReviewModal = (props) => {
         reviewModal ? "DetailReviewModal-open" : ""
       }`}
     >
-      {/* <RatingText>평가하기</RatingText> */}
-      {/* <Stars>
-            {starArray.map((sIdx, i) => {
-              return (
-                <FaStar
-                  key={i}
-                  size="30"
-                  onClick={() => handleStarClick(sIdx)}
-                  className={clicked[sIdx] && "yellowStar"}
-                />
-              );
-            })}
-          </Stars> */}
       <textarea
         name=""
         id=""
@@ -101,24 +85,3 @@ const DetailReviewModal = (props) => {
 };
 
 export default DetailReviewModal;
-
-// const Stars = styled.div`
-//   padding-top: 5px;
-
-//   & svg {
-//     color: gray;
-//     cursor: pointer;
-//   }
-
-//   :hover svg {
-//     color: #fcc419;
-//   }
-
-//   & svg:hover ~ svg {
-//     color: gray;
-//   }
-
-//   .yellowStar {
-//     color: #fcc419;
-//   }
-// `;

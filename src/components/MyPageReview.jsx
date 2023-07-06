@@ -9,12 +9,11 @@ import { limitReview } from "../modules/user";
 
 let reviewId = 7;
 
-const MyPageReview = (props) => {
-  const { reviewModal, setReviewModal } = props;
+const MyPageReview = ( ) => {
   const { id } = useParams();
   const [imgId, setImgId] = useState(1);
   const user = useSelector((state) => state.user);
-  const review = useSelector((state) => state.mainReview);
+  // const review = useSelector((state) => state.mainReview);
   const navigate = useNavigate();
   const mainItems = useSelector((state) => state.mainState);
   const reviewItem = mainItems.find((item) => item.itemId == id);

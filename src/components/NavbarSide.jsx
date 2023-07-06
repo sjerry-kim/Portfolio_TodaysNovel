@@ -3,15 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/NavbarSide.css";
 import { EmptyCart } from "../modules/cart";
-// import { signOut } from "../modules/user";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faBasketShopping } from "@fortawesome/free-solid-svg-icons";
-// import { faUser, faBasketShopping } from "@fortawesome/free-regular-svg-icons";
 
 const NavbarSide = () => {
   const user = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cart);
-  const review = useSelector((state) => state.mainReview);
+  // const review = useSelector((state) => state.mainReview);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const sessionId = sessionStorage.getItem("id");

@@ -1,5 +1,6 @@
 import "../css/NotFound.css";
 
+// not found 페이지
 const NotFound = () => {
   return (
     <div className="NotFound-wp">

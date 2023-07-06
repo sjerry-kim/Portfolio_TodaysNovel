@@ -12,10 +12,14 @@ import NotFound from "./NotFound";
 const MyPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // user.js 셀렉
   const user = useSelector((state) => state.user);
+  // mainReview.js 셀렉
   const review = useSelector((state) => state.mainReview);
+  // 로그인 접근제한 리다이렉트용 로그인 유무 확인용 sessionId, currentUser
   const sessionId = sessionStorage.getItem("id");
   const currentUser = user.userList.find((user) => user.id == sessionId);
+  // 마이페이지 회원 정보 state
   const [changeInfo, setChageInfo] = useState(false);
   const [name, setName] = useState(currentUser.name);
   const [id, setId] = useState(currentUser.id);
@@ -28,28 +32,10 @@ const MyPage = () => {
   const [additionalAdress, setAdditionalAdress] = useState(
     currentUser.additionalAdress
   );
+  // 모달 state
   const [reviewModal, setReviewModal] = useState(false);
   const [postModal, setPostModal] = useState(false);
-
-  useEffect(() => {
-    console.log(review[0]);
-    console.log(currentUser);
-  });
-
-  const changeProfile = () => {
-    const profile = {
-      name: name,
-      id: id,
-      pw: pw,
-      tel: tel,
-      email: email,
-      post: post,
-      restAdress: restAdress,
-      additionalAdress: additionalAdress,
-    };
-    dispatch(changeUserInfo(profile));
-  };
-
+  // map으로 풀어내기 위해 배열로 묶은 key값과 value값
   const myPageInfoKey = [
     {
       keyK: "이름",
@@ -72,6 +58,27 @@ const MyPage = () => {
       keyE: email,
     },
   ];
+
+  // useEffect(() => {
+  //   console.log(review[0]);
+  //   console.log(currentUser);
+  // });
+
+  // 회원정보(프로필) 변경 함수
+  const changeProfile = () => {
+    const profile = {
+      name: name,
+      id: id,
+      pw: pw,
+      tel: tel,
+      email: email,
+      post: post,
+      restAdress: restAdress,
+      additionalAdress: additionalAdress,
+    };
+    dispatch(changeUserInfo(profile));
+  };
+
 
   return (
     <div className="MyPage-wp">
